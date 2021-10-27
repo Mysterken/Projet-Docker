@@ -2,6 +2,7 @@
 
 class Player
 {
+    private $hp, $defense, $attack;
 
     public function __construct($hp, $defense, $attack)
     {
@@ -58,5 +59,18 @@ class Player
         $this->hp = $hp;
     }
 
+    /**
+     * @param Player $player
+     * @return bool
+     */
+    public function attackPlayer(Player $player)
+    {
+        $damage = $this->getAttack() - $player->getDefense();
 
+        if ($damage > 0) {
+            $player->setHp($player->getHp() -  $damage);
+            return true;
+        }
+        return false;
+    }
 }

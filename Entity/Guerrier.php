@@ -1,0 +1,12 @@
+<?php
+
+class Guerrier extends Player
+{
+    public function __construct()
+    {
+        $hp = 100;
+        $defense = rand(10, 19);
+        $attack = rand(20, 40);
+        parent::__construct($hp, $defense, $attack);
+    }
+}
