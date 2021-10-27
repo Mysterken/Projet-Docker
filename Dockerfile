@@ -1,3 +1,3 @@
 FROM nginx:latest
-COPY ./content/index.php /usr/share/nginx/html/index.html
+COPY content/html/index.html /usr/share/nginx/html/index.html
 EXPOSE 80
