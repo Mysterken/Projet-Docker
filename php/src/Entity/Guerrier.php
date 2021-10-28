@@ -2,6 +2,9 @@
 
 class Guerrier extends Player
 {
+    /**
+     * @param $name
+     */
     public function __construct($name)
     {
         $hp = 100;
