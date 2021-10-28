@@ -1,0 +1,28 @@
+.colorbutton {
+    color: red;
+}
+
+.colorbutton1 {
+    color: blue;
+}
+
+.divclass {
+    margin-left: auto;
+    margin-bottom: auto;
+    text-align: center;
+    margin-top: 30rem;
+}
+
+
+.champsprenom {
+    margin: 0 auto;
+     width: 135px;
+     height: 30px;
+}
+
+.textechamp {
+    margin: 0 auto;
+    width: 237px;
+    align-content: center;
+}
+

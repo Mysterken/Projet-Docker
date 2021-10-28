@@ -3,10 +3,113 @@
 <head>
     <meta charset="utf-8">
     <title>Homepage</title>
+    <link rel="stylesheet" type="text/css" href=css/index.css>
 </head>
 <body>
-<div>
-    jezfjknezke
-</div>
+    <form name="lemeilleurjeudumonde" action="" method="get">
+        <form action="welcome_get.php" method="get">
+            Name: <input type="text" name="name"><br>
+            E-mail: <input type="text" name="email"><br>
+            <input type="submit">
+        </form>
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0 auto;
+        width: 170px;
+        text-align: center;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+    
+    li {
+        float: left;
+    }
+    
+    li a, .dropbtn {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    
+    li a:hover, .dropdown:hover .dropbtn {
+        background-color: red;
+    }
+    
+    li.dropdown {
+        display: inline-block;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+    
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    
+    .dropdown-content a:hover {background-color: #f1f1f1}
+    
+    .show {display:block;}
+    </style>
+    </head>
+    <body>
+    
+    <ul>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">Choix de votre classe</a>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="#">Classe Guerrier</a>
+          <a href="#">Classe magicien</a>
+        </div>
+      </li>
+    </ul>
+    
+    <script>
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+    
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var d = 0; d < dropdowns.length; d++) {
+          var openDropdown = dropdowns[d];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    <br />
+    <div class ="textechamp">
+    <input type="text" placeholder="Choissisez votre prénom" id="in">
+    <button type="button" onclick="getValue();">Valider</button>
+    
+    </div> 
+<script>
+    function getValue() {
+    var input = document.getElementById("in").value;
+    alert("Bienvenue à toi"+ " " + input + " " +"heureux de faire ta connaissance");
+    alert("Pour commencer à jouer selectionne une classe")
+}
+  </script>
+
+    <div class="divclass">
+        <button class="colorbutton">Attaquer</button>
+        <button class="colorbutton1">Endormir</button>
+    </div>
 </body>
 </html>
