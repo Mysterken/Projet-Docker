@@ -2,19 +2,26 @@
 
 class Player
 {
-    private $hp, $defense, $attack;
+    private $hp, $defense, $attack, $name;
 
-    public function __construct($hp, $defense, $attack)
+    /**
+     * @param int $hp
+     * @param int $defense
+     * @param int $attack
+     * @param string $name
+     */
+    public function __construct(int $hp, int $defense, int $attack, string $name)
     {
-        $this->hp = $hp;
-        $this->defense = $defense;
-        $this->attack = $attack;
+        $this->setHp($hp);
+        $this->setDefense($defense);
+        $this->setAttack($attack);
+        $this->setName($name);
     }
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getAttack()
+    public function getAttack(): int
     {
         return $this->attack;
     }
@@ -22,15 +29,15 @@ class Player
     /**
      * @param mixed $attack
      */
-    public function setAttack($attack)
+    public function setAttack(int $attack)
     {
         $this->attack = $attack;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getDefense()
+    public function getDefense(): int
     {
         return $this->defense;
     }
@@ -38,15 +45,15 @@ class Player
     /**
      * @param mixed $defense
      */
-    public function setDefense($defense)
+    public function setDefense(int $defense)
     {
         $this->defense = $defense;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getHp()
+    public function getHp(): int
     {
         return $this->hp;
     }
@@ -54,9 +61,25 @@ class Player
     /**
      * @param mixed $hp
      */
-    public function setHp($hp)
+    public function setHp(int $hp)
     {
         $this->hp = $hp;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param string $name
+     */
+    public function setName(string $name): void
+    {
+        $this->name = $name;
     }
 
     /**
