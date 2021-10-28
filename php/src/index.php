@@ -2,3 +2,12 @@
 require "./common.php";
 
 ?>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+</head>
+<body>
+
+</body>
+</html>
