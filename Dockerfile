@@ -1,3 +1,3 @@
-FROM nginx:latest
-COPY content/html/index.html /usr/share/nginx/html/index.html
-EXPOSE 80
+FROM php:7.2-apache
+COPY php/src/ /var/www/html/
+VOLUME /var/www/html/
