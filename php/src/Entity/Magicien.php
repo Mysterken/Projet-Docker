@@ -1,5 +1,8 @@
 <?php
 
+include_once 'Player.php';
+use Entity\Player;
+
 class Magicien extends Player
 {
     /**
